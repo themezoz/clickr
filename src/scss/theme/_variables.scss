@@ -143,6 +143,7 @@ $twitter: #1da1f2 !default;
 $google-plus: #dd4b39 !default;
 $github: #333 !default;
 $youtube: #ff0000 !default;
+$instagram: #8a3ab9 !default;
 
 $brand-colors: () !default;
 $brand-colors: map-merge(
@@ -153,6 +154,7 @@ $brand-colors: map-merge(
     'linkedin': $linkedin,
     'youtube': $youtube,
     'github': $github,
+    'instagram': $instagram,
   ),
   $brand-colors
 );
@@ -325,7 +327,7 @@ $input-btn-padding-y-sm: .5rem !default;
 $input-btn-padding-x-sm: 1.2rem !default;
 
 $input-btn-padding-y-lg: .5rem !default;
-$input-btn-padding-x-lg: 2rem !default;
+$input-btn-padding-x-lg: 2.8rem !default;
 $input-btn-font-size-lg:  $font-size-base !default;
 
 $btn-reveal-hover-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
@@ -435,8 +437,9 @@ $carousel-indicator-height:          8px !default;
 $carousel-indicator-hit-area-height : 0 !default;
 
 
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#fff' class='bi bi-arrow-left-short' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z'/%3E%3C/svg%3E") !default;
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#fff' class='bi bi-arrow-right-short' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E") !default;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.0703 21.6875C16.7539 22.0039 16.7539 22.5312 17.0703 22.8477L23.8906 29.7031C24.2422 30.0195 24.7695 30.0195 25.0859 29.7031L25.8945 28.8945C26.2109 28.5781 26.2109 28.0508 25.8945 27.6992L20.4805 22.25L25.8945 16.8359C26.2109 16.4844 26.2109 15.957 25.8945 15.6406L25.0859 14.832C24.7695 14.5156 24.2422 14.5156 23.8906 14.832L17.0703 21.6875Z' fill='%23FF6A00'/%3E%3Crect x='1' y='1' width='43' height='43' rx='21.5' stroke='%23FF6A00' stroke-width='2'/%3E%3C/svg%3E") !default;
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,%3Csvg width='46' height='45' viewBox='0 0 46 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.948 22.8477C28.2644 22.5312 28.2644 22.0039 27.948 21.6875L21.1277 14.832C20.7761 14.5156 20.2488 14.5156 19.9324 14.832L19.1238 15.6406C18.8074 15.957 18.8074 16.4844 19.1238 16.8359L24.5378 22.25L19.1238 27.6992C18.8074 28.0508 18.8074 28.5781 19.1238 28.8945L19.9324 29.7031C20.2488 30.0195 20.7761 30.0195 21.1277 29.7031L27.948 22.8477Z' fill='%23FF6A00'/%3E%3Crect x='1.05347' y='1' width='43' height='43' rx='21.5' stroke='%23FF6A00' stroke-width='2'/%3E%3C/svg%3E%0A") !default;
+
 
 
 $carousel-control-icon-width:        2.5rem !default;

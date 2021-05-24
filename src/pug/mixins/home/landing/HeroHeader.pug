@@ -3,7 +3,60 @@ mixin HeroHeader
     .container
       .row.align-items-center.min-vh-50
         .col-12.text-center
-          h1.lh-sm.fs-7 Product Photography 
+          h1.lh-sm.fs-lg-7 San Francisco Based 
             br
-            |  Services in San Francisco 
-          p.text-700 Ship or drop off your products today to get high-quality photos in days, not weeks.
+            | Product Photography  Services 
+          p.text-700 Get high-quality aesthetic photographs of your valuable products within few days 
+          .mt-5
+            a.btn.btn-sm.btn-warning.rounded-pill(type='submit')
+              i.fas.fa-camera.me-2(width='12' height='12')
+              | Book a photoshoot
+    .container-fluid 
+      #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false' data-bs-interval='false')
+        .carousel-inner
+          .carousel-item.active
+            .row.justify-content-lg-between.g-3
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg 
+                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+              
+          .carousel-item
+            .row.justify-content-lg-between.g-3
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg 
+                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+              
+          .carousel-item
+            .row.justify-content-lg-between.g-3
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+              .col-12.col-sm-6.col-md-4.col-lg 
+                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+              .col-12.col-sm-6.col-md-4.col-lg
+                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+              
+        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.visually-hidden Previous
+        button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.visually-hidden Next          
+              
