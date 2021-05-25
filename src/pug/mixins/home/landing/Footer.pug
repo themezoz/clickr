@@ -6,31 +6,31 @@ mixin FooterList(...items)
 
 mixin Footer
   +Section.py-0.pt-7
-    .row
-      .col-6.col-lg-2.mb-3
+    .row.justify-content-between.gx-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
         h5.lh-lg.fw-bold.text-1000 Why Us
         ul.list-unstyled.mb-md-4.mb-lg-0
           +FooterList('About Us','Affiliate','Fashion Blogger')
 
-      .col-6.col-lg-2.mb-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
         h5.lh-lg.fw-bold.text-1000 Product
         ul.list-unstyled.mb-md-4.mb-lg-0
           +FooterList('Shipping Info','Refunds','How to Order','How to Track','Size Guides')
 
-      .col-6.col-lg-2.mb-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
         h5.lh-lg.fw-bold.text-1000 Resources
         ul.list-unstyled.mb-md-4.mb-lg-0
           +FooterList('Contact Us','Payment Methods','Bonus Point')
-      .col-6.col-lg-2.mb-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
         h5.lh-lg.fw-bold.text-1000 Company
         ul.list-unstyled.mb-md-4.mb-lg-0
           +FooterList('Contact Us','Payment Methods','Bonus Point') 
-      .col-6.col-lg-2.mb-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
         h5.lh-lg.fw-bold.text-1000 Pricing
         ul.list-unstyled.mb-md-4.mb-lg-0
           +FooterList('Contact Us','Payment Methods','Bonus Point')       
 
-      .col-sm-6.col-lg-2
+      .col-6.col-md-4.col-lg-3.col-xl-2
         h5.lh-lg.fw-bold.text-1000 Contact
 
         p.text-800
@@ -38,12 +38,12 @@ mixin Footer
           span.text-900 +214556905345
         p.text-800
           i.fas.fa-envelope.text-warning.me-2
-          span.text-800 something@email.com
+          span.text-800 example@email.com
         p.text-800
           i.fas.fa-map-marker-alt.text-success.me-2
           span.text-800 567, Kansas,  San Francisco, USA 
       .col-12
-        .text-center.mb-5
+        .text-center.my-4
           a(href='#!')
             i.me-4.fab.fa-facebook.fs-3.text-facebook
           a(href='#!')  

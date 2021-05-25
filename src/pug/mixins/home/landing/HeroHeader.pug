@@ -1,3 +1,49 @@
+
+append variables
+  -
+    var headerProducts= [
+      {
+        image:'product-1.png',
+      },
+      {
+        image:'product-2.png',
+      },
+
+      {
+        image:'product-3.png',
+      },
+      {
+        image:'product-4.png',
+      },
+
+      {
+        image:'product-5.png',
+      },
+       {
+        image:'product-1.png',
+      },
+      {
+        image:'product-2.png',
+      },
+
+      {
+        image:'product-3.png',
+      },
+      {
+        image:'product-4.png',
+      },
+
+      {
+        image:'product-5.png',
+      },
+    ]
+
+
+mixin HeaderProductCard(config)
+  .row
+    .col
+      img(src=`${CWD}assets/img/gallery/${config.image}` width='320'  alt='products')
+
 mixin HeroHeader
   section.py-0#header
     .container
@@ -12,51 +58,57 @@ mixin HeroHeader
               i.fas.fa-camera.me-2(width='12' height='12')
               | Book a photoshoot
     .container-fluid 
-      #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false' data-bs-interval='false')
-        .carousel-inner
-          .carousel-item.active
-            .row.justify-content-lg-between.g-3
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg 
-                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-              
-          .carousel-item
-            .row.justify-content-lg-between.g-3
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg 
-                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-              
-          .carousel-item
-            .row.justify-content-lg-between.g-3
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-              .col-12.col-sm-6.col-md-4.col-lg 
-                img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-              .col-12.col-sm-6.col-md-4.col-lg
-                img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-              
-        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
-          span.visually-hidden Previous
-        button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
-          span.visually-hidden Next          
-              
+      .mt-4 
+        .swiper-container.pb-4(data-pagination-target=id) 
+          .swiper-wrapper
+            each item in headerProducts
+              .swiper-slide.h-auto
+                +HeaderProductCard(item) 
+        .swiper-pagination(id=id)
+      //- #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false' data-bs-interval='false')
+      //-   .carousel-inner
+      //-     .carousel-item.active
+      //-       .row.justify-content-lg-between.g-3
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg 
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+
+      //-     .carousel-item
+      //-       .row.justify-content-lg-between.g-3
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg 
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+
+      //-     .carousel-item
+      //-       .row.justify-content-lg-between.g-3
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
+      //-         .col-12.col-sm-6.col-md-4.col-lg 
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
+      //-         .col-12.col-sm-6.col-md-4.col-lg
+      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
+
+      //-   button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
+      //-     span.carousel-control-prev-icon(aria-hidden='true')
+      //-     span.visually-hidden Previous
+      //-   button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
+      //-     span.carousel-control-next-icon(aria-hidden='true')
+      //-     span.visually-hidden Next          

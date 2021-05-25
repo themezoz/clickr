@@ -14,12 +14,23 @@ include mixins/home/landing/Footer
 
 
 append variables
-  - var currentPage = 'index'
+  append variables
+    - var currentPage = 3;
+    -
+      var attrsBody = {
+          'data-bs-spy':"scroll",
+          'data-bs-target':"#navbar"
+      }
+
+
+append styles
+    link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`,rel='stylesheet') 
 
 prepend scripts
+    script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
   
 append content
-  +HeroHeader
+  +HeroHeader({id: 'pagination1'})
   +Brands
   +HowItHappens
   +Testimonials
