@@ -1,4 +1,3 @@
-
 append variables
   -
     var headerProducts= [
@@ -38,11 +37,8 @@ append variables
       },
     ]
 
-
 mixin HeaderProductCard(config)
-  .row.justify-content-between
-    .col-11
-      img.swiper-image(src=`${CWD}assets/img/gallery/${config.image}`   alt='products')
+  img(src=`${CWD}assets/img/gallery/${config.image}`  alt='products')
 
 mixin HeroHeader({id})
   section.py-0#header
@@ -54,13 +50,15 @@ mixin HeroHeader({id})
             | Product Photography  Services 
           p.text-700 Get high-quality aesthetic photographs of your valuable products within few days 
           .mt-5
-            a.btn.btn-sm.btn-warning.rounded-pill(type='submit')
-              i.fas.fa-camera.me-2(width='12' height='12')
+            a.btn.btn-sm.btn-warning.rounded-pill(href="#!")
+              i.fas.fa-camera.me-2
               | Book a photoshoot
-    .container-fluid      
-      .swiper-container.pb-4(data-pagination-target=id) 
-        .swiper-wrapper
-          each item in headerProducts
-            .swiper-slide.h-auto
-              +HeaderProductCard(item) 
-        //- .swiper-pagination(id=id)
+    .container-fluid.overflow-hidden  
+      .row.gx-2 
+        .col-12    
+          .swiper-container.pb-4(data-pagination-target=id) 
+            .swiper-wrapper
+              each item in headerProducts
+                .swiper-slide.h-auto
+                  +HeaderProductCard(item) 
+            //- .swiper-pagination(id=id)

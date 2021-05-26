@@ -27,10 +27,9 @@ function swiperInit(){
       {
        
         pagination: {
-            el: document.getElementById(swiper.dataset.paginationTarget),
-            type: 'fraction',
-            clickable: true,
-    
+          el: document.getElementById(swiper.dataset.paginationTarget),
+          type: 'fraction',
+          clickable: true,
         },
         autoplay: {
           delay: 2000,
@@ -38,10 +37,10 @@ function swiperInit(){
           waitForTransition: true,
         },
         breakpoints: {
-          670: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
+          // 670: {
+          //   slidesPerView: 2,
+          //   spaceBetween: 20,
+          // },
           768: {
             slidesPerView: 2,
             spaceBetween: 20,

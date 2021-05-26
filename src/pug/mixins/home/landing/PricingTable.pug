@@ -1,14 +1,12 @@
 mixin PriceItem(config, ...items)
   .col-md-4.pt-6.px-md-2.px-lg-3
-    //- +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: '' })
     .card.h-100.rounded-3(class=`${config.bg}`)
       +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: 'rounded-3' })
-      .card-body.d-flex.flex-column.justify-content-around
+      .card-body.z-index-2
         .ms-4
           h5.my-4.text-800=config.title
-          h1.fs-7.mb-6.text(class=`${config.textColor}`)= config.footerTitle
-            br
-            .fs--1 / per image
+          h1.fs-7.text(class=`${config.textColor}`)= config.footerTitle
+          h6.fs--1.mb-6(class=`${config.textColor}`) / per image
           ul.list-unstyled
             each item in items      
               li.mb-3.text-900
@@ -16,11 +14,11 @@ mixin PriceItem(config, ...items)
                 =item 
         .my-5.text-center
           if config.hasBtnOutlinePrimary
-            button.btn.btn-lg.btn-outline-primary.rounded-pill(type='submit') Choose plan
+            button.btn.btn-lg.btn-outline-primary.rounded-pill(type='button') Choose plan
           else if config.hasBtnOutlineSuccess
-            button.btn.btn-lg.btn-outline-success.rounded-pill(type='submit') Choose plan  
+            button.btn.btn-lg.btn-outline-success.rounded-pill(type='button') Choose plan  
           else
-            button.btn.btn-lg.btn-warning.hover-top.btn-glow.rounded-pill.border-0(type='submit') Choose plan
+            button.btn.btn-lg.btn-warning.hover-top.btn-glow.rounded-pill.border-0(type='button') Choose plan
 
 mixin Pricing
   +Section('container-lg').bg-100.py-7
