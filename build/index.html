@@ -26,9 +26,10 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="assets/css/theme.min.css" rel="stylesheet" />
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
@@ -37,7 +38,7 @@
         <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><img class="card-img" src="assets/img/gallery/logo.png" alt="..." /><span class="fs-2 fw-bold text-primary ms-2">CLICK<span class="text-warning">R</span></span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item px-2"><a class="nav-link fw-bold active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-bold" aria-current="page" href="#">Home</a></li>
               <li class="nav-item px-2"><a class="nav-link fw-bold" href="#">How it works</a></li>
               <li class="nav-item px-2"><a class="nav-link fw-bold" href="#">Reviews</a></li>
               <li class="nav-item px-2"><a class="nav-link fw-bold" href="#">Works</a></li>
@@ -49,7 +50,7 @@
       </nav>
       <section class="py-0" id="header">
         <div class="container">
-          <div class="row align-items-center min-vh-50">
+          <div class="row align-items-center min-vh-75">
             <div class="col-12 text-center">
               <h1 class="lh-sm fs-lg-7">San Francisco Based <br />Product Photography Services </h1>
               <p class="text-700">Get high-quality aesthetic photographs of your valuable products within few days </p>
@@ -58,36 +59,59 @@
           </div>
         </div>
         <div class="container-fluid">
-          <div class="carousel slide" id="carouselExampleControlsNoTouching" data-bs-touch="false" data-bs-interval="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row justify-content-lg-between g-3">
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-1.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-2.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-3.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"> <img class="card-img" src="assets/img/gallery/product-4.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-5.png" alt="..." /></div>
+          <div class="swiper-container pb-4" data-pagination-target="pagination1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-1.png" alt="products" /></div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <div class="row justify-content-lg-between g-3">
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-1.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-2.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-3.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"> <img class="card-img" src="assets/img/gallery/product-4.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-5.png" alt="..." /></div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-2.png" alt="products" /></div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <div class="row justify-content-lg-between g-3">
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-1.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-2.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-3.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"> <img class="card-img" src="assets/img/gallery/product-4.png" alt="..." /></div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg"><img class="card-img" src="assets/img/gallery/product-5.png" alt="..." /></div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-3.png" alt="products" /></div>
                 </div>
               </div>
-            </div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next          </span></button>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-4.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-5.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-1.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-2.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-3.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-4.png" alt="products" /></div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="row justify-content-between">
+                  <div class="col-11"><img class="swiper-image" src="assets/img/gallery/product-5.png" alt="products" /></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,6 +247,8 @@
           <div class="row h-100 justify-content-center">
             <div class="col-md-4 pt-6 px-md-2 px-lg-3">
               <div class="card h-100 rounded-3 bg-soft-primary">
+                <div class="bg-holder rounded-3" style="background-image:url(assets/img/gallery/pricing-primary.png);background-position:top right;background-size:auto;"></div>
+                <!--/.bg-holder-->
                 <div class="card-body d-flex flex-column justify-content-around">
                   <div class="ms-4">
                     <h5 class="my-4 text-800">Basic</h5>
@@ -243,6 +269,8 @@
             </div>
             <div class="col-md-4 pt-6 px-md-2 px-lg-3">
               <div class="card h-100 rounded-3 bg-soft-warning">
+                <div class="bg-holder rounded-3" style="background-image:url(assets/img/gallery/pricing-warning.png);background-position:top right;background-size:auto;"></div>
+                <!--/.bg-holder-->
                 <div class="card-body d-flex flex-column justify-content-around">
                   <div class="ms-4">
                     <h5 class="my-4 text-800">Avarage</h5>
@@ -263,6 +291,8 @@
             </div>
             <div class="col-md-4 pt-6 px-md-2 px-lg-3">
               <div class="card h-100 rounded-3 bg-soft-success">
+                <div class="bg-holder rounded-3" style="background-image:url(assets/img/gallery/pricing-success.png);background-position:top right;background-size:auto;"></div>
+                <!--/.bg-holder-->
                 <div class="card-body d-flex flex-column justify-content-around">
                   <div class="ms-4">
                     <h5 class="my-4 text-800">Professional</h5>
@@ -444,26 +474,26 @@
           <div class="row">
             <h1 class="text-center lh-sm fs-lg-7 mb-5">Our Services</h1>
             <div class="col-12">
-              <div class="card mb-3 bg-soft-primary">
+              <div class="card mb-3 hover-top-shadow rounded-3 bg-soft-primary">
                 <div class="row g-0 flex-center">
                   <div class="col-md-4 order-0"><img src="assets/img/gallery/services-shoe-blue.png" alt="..." /></div>
                   <div class="col-md-8">
                     <div class="card-body p-8">
                       <h5 class="card-title text-primary">Photo Preview</h5>
                       <p class="card-text">Invest on your commercial product photography on a visual story created by our creative team. Each click at the most reasonable price going to pay you more.</p>
-                      <div class="d-flex justify-content-start"><a class="btn btn-lg px-0 stretched-link text-primary" href="#!">View portfolio<i class="fas fa-arrow-right ms-2"></i></a><a class="btn btn-lg text-primary" href="#!">Pricing<i class="fas fa-arrow-right ms-2"></i></a></div>
+                      <div class="d-flex justify-content-start"><a class="btn btn-lg px-0 stretched-link text-primary" href="#!">View portfolio<i class="fas fa-arrow-right ms-2"></i></a><a class="btn btn-lg text-primary" href="#!">Pricing<i class="fas fa-arrow-right hvr-icon-forward ms-2"></i></a></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3 bg-soft-success">
+              <div class="card mb-3 hover-top-shadow rounded-3 bg-soft-success">
                 <div class="row g-0 flex-center">
                   <div class="col-md-4 order-1"><img src="assets/img/gallery/services-shoe-green.png" alt="..." /></div>
                   <div class="col-md-8">
                     <div class="card-body p-8">
                       <h5 class="card-title text-success">Product Revision</h5>
                       <p class="card-text">It's not just another edge correcting service. A team trusted by more than 5,000 brands will work at your product with care and creativity.</p>
-                      <div class="d-flex justify-content-start"><a class="btn btn-lg px-0 stretched-link text-success" href="#!">View portfolio<i class="fas fa-arrow-right ms-2"></i></a><a class="btn btn-lg text-success" href="#!">Pricing<i class="fas fa-arrow-right ms-2"></i></a></div>
+                      <div class="d-flex justify-content-start"><a class="btn btn-lg px-0 stretched-link text-success" href="#!">View portfolio<i class="fas fa-arrow-right ms-2"></i></a><a class="btn btn-lg text-success" href="#!">Pricing<i class="fas fa-arrow-right hvr-icon-forward ms-2"></i></a></div>
                     </div>
                   </div>
                 </div>
@@ -534,8 +564,8 @@
       <!-- <section> begin ============================-->
       <section class="py-0 pt-7">
         <div class="container">
-          <div class="row">
-            <div class="col-6 col-lg-2 mb-3">
+          <div class="row justify-content-xl-between gx-3">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
               <h5 class="lh-lg fw-bold text-1000">Why Us</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">About Us</a></li>
@@ -543,7 +573,7 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Fashion Blogger</a></li>
               </ul>
             </div>
-            <div class="col-6 col-lg-2 mb-3">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
               <h5 class="lh-lg fw-bold text-1000">Product</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Shipping Info</a></li>
@@ -553,7 +583,7 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Size Guides</a></li>
               </ul>
             </div>
-            <div class="col-6 col-lg-2 mb-3">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
               <h5 class="lh-lg fw-bold text-1000">Resources</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Contact Us</a></li>
@@ -561,7 +591,7 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Bonus Point</a></li>
               </ul>
             </div>
-            <div class="col-6 col-lg-2 mb-3">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
               <h5 class="lh-lg fw-bold text-1000">Company</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Contact Us</a></li>
@@ -569,7 +599,7 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Bonus Point</a></li>
               </ul>
             </div>
-            <div class="col-6 col-lg-2 mb-3">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
               <h5 class="lh-lg fw-bold text-1000">Pricing</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Contact Us</a></li>
@@ -577,14 +607,14 @@
                 <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Bonus Point</a></li>
               </ul>
             </div>
-            <div class="col-sm-6 col-lg-2">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
               <h5 class="lh-lg fw-bold text-1000">Contact</h5>
               <p class="text-800"><i class="fas fa-phone-alt text-primary me-2"></i><span class="text-900">+214556905345</span></p>
-              <p class="text-800"><i class="fas fa-envelope text-warning me-2"></i><span class="text-800">something@email.com</span></p>
+              <p class="text-800"><i class="fas fa-envelope text-warning me-2"></i><span class="text-800">example@email.com</span></p>
               <p class="text-800"><i class="fas fa-map-marker-alt text-success me-2"></i><span class="text-800">567, Kansas,  San Francisco, USA </span></p>
             </div>
             <div class="col-12">
-              <div class="text-center mb-5"><a href="#!"><i class="me-4 fab fa-facebook fs-3 text-facebook"></i></a><a href="#!"> <i class="me-4 fab fa-twitter fs-3 text-twitter"></i></a><a href="#!"> <i class="me-4 fab fa-instagram fs-3 text-instagram"></i></a></div>
+              <div class="text-center my-4"><a href="#!"><i class="me-4 fab fa-facebook fs-3 text-facebook"></i></a><a href="#!"> <i class="me-4 fab fa-twitter fs-3 text-twitter"></i></a><a href="#!"> <i class="me-4 fab fa-instagram fs-3 text-instagram"></i></a></div>
             </div>
           </div>
           <div class="border-bottom border-3"></div>
@@ -614,6 +644,7 @@
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"> </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="vendors/fontawesome/all.min.js"></script>
     <script src="assets/js/theme.js"></script>

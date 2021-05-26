@@ -432,23 +432,34 @@ function swiperInit() {
   swipers.forEach(function (swiper) {
     // console.log(swiper.dataset.option ? JSON.parse(swiper.dataset.option) : {});
     return new window.Swiper(swiper, deepMerge({
-      slidesPerView: 5,
-      spaceBetween: 30,
       pagination: {
         el: document.getElementById(swiper.dataset.paginationTarget),
-        type: 'bullets',
+        type: 'fraction',
         clickable: true
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        waitForTransition: true
       },
       breakpoints: {
         670: {
           slidesPerView: 2,
           spaceBetween: 20
         },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
         1200: {
           slidesPerView: 3,
           spaceBetween: 50
         },
-        1201: {
+        1400: {
           slidesPerView: 5,
           spaceBetween: 10
         }

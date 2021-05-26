@@ -1,5 +1,5 @@
 mixin ServicesCard(config)
-	.card.mb-3(class=`${config.bg}`)
+	.card.mb-3.hover-top-shadow.rounded-3(class=`${config.bg}`)
 		.row.g-0.flex-center
 			.col-md-4(class=`${config.imageOrder}`)
 				img(src=`${CWD}assets/img/gallery/${config.image}`  alt='...')
@@ -12,5 +12,5 @@ mixin ServicesCard(config)
 							i.fas.fa-arrow-right.ms-2
 						
 						a.btn.btn-lg(href='#!' class=`${config.btnTextColor}`) Pricing
-							i.fas.fa-arrow-right.ms-2
+							i.fas.fa-arrow-right.hvr-icon-forward.ms-2
 							

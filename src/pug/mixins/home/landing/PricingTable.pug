@@ -1,6 +1,8 @@
 mixin PriceItem(config, ...items)
   .col-md-4.pt-6.px-md-2.px-lg-3
+    //- +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: '' })
     .card.h-100.rounded-3(class=`${config.bg}`)
+      +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: 'rounded-3' })
       .card-body.d-flex.flex-column.justify-content-around
         .ms-4
           h5.my-4.text-800=config.title
@@ -27,9 +29,9 @@ mixin Pricing
         h1.text-center.lh-sm.fs-lg-7 Our Packages
     .row.h-100.justify-content-center
 
-      - const p1 = {title:'Basic', image: 'pricing.png',bg:'bg-soft-primary', footerTitle:'$9',textColor:'text-primary',hasBtnOutlinePrimary: true}
-      - const p2 = {title:'Professional', image: 'pricing.png',bg:'bg-soft-success', footerTitle: '$19',textColor:'text-success', hasBtnOutlineSuccess: true }  
-      - const p3 = {title:'Avarage', image: 'pricing.png',bg:'bg-soft-warning',footerTitle:'$29',textColor:'text-warning' ,hasBtnOutline: false}
+      - const p1 = {title:'Basic', image: 'pricing.png',bg:'bg-soft-primary',bgimage:'pricing-primary.png', footerTitle:'$9',textColor:'text-primary',hasBtnOutlinePrimary: true}
+      - const p2 = {title:'Professional', image: 'pricing.png',bg:'bg-soft-success',bgimage:'pricing-success.png' ,footerTitle: '$19',textColor:'text-success', hasBtnOutlineSuccess: true }  
+      - const p3 = {title:'Avarage', image: 'pricing.png',bg:'bg-soft-warning',bgimage:'pricing-warning.png',footerTitle:'$29',textColor:'text-warning' ,hasBtnOutline: false}
 
       +PriceItem(p1, 'High quality images ', 'Single Revision', '10 Products per order','Not providing softcopy','Free return shipment')
       +PriceItem(p3, 'High quality images ', '5 Revisions', '25 Products per order','Provides softcopy & PSD','Free return shipment')

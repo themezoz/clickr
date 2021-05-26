@@ -40,14 +40,14 @@ append variables
 
 
 mixin HeaderProductCard(config)
-  .row
-    .col
-      img(src=`${CWD}assets/img/gallery/${config.image}` width='320'  alt='products')
+  .row.justify-content-between
+    .col-11
+      img.swiper-image(src=`${CWD}assets/img/gallery/${config.image}`   alt='products')
 
-mixin HeroHeader
+mixin HeroHeader({id})
   section.py-0#header
     .container
-      .row.align-items-center.min-vh-50
+      .row.align-items-center.min-vh-75
         .col-12.text-center
           h1.lh-sm.fs-lg-7 San Francisco Based 
             br
@@ -57,58 +57,10 @@ mixin HeroHeader
             a.btn.btn-sm.btn-warning.rounded-pill(type='submit')
               i.fas.fa-camera.me-2(width='12' height='12')
               | Book a photoshoot
-    .container-fluid 
-      .mt-4 
-        .swiper-container.pb-4(data-pagination-target=id) 
-          .swiper-wrapper
-            each item in headerProducts
-              .swiper-slide.h-auto
-                +HeaderProductCard(item) 
-        .swiper-pagination(id=id)
-      //- #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false' data-bs-interval='false')
-      //-   .carousel-inner
-      //-     .carousel-item.active
-      //-       .row.justify-content-lg-between.g-3
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg 
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-
-      //-     .carousel-item
-      //-       .row.justify-content-lg-between.g-3
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg 
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-
-      //-     .carousel-item
-      //-       .row.justify-content-lg-between.g-3
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-1.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-2.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-3.png` alt='...')            
-      //-         .col-12.col-sm-6.col-md-4.col-lg 
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-4.png` alt='...')           
-      //-         .col-12.col-sm-6.col-md-4.col-lg
-      //-           img.card-img(src=`${CWD}assets/img/gallery/product-5.png` alt='...')          
-
-      //-   button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
-      //-     span.carousel-control-prev-icon(aria-hidden='true')
-      //-     span.visually-hidden Previous
-      //-   button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
-      //-     span.carousel-control-next-icon(aria-hidden='true')
-      //-     span.visually-hidden Next          
+    .container-fluid      
+      .swiper-container.pb-4(data-pagination-target=id) 
+        .swiper-wrapper
+          each item in headerProducts
+            .swiper-slide.h-auto
+              +HeaderProductCard(item) 
+        //- .swiper-pagination(id=id)

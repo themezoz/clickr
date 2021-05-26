@@ -14,3 +14,27 @@
     position: unset !important;
     text-align: center;
 }
+
+.swiper-image{
+   width: 23.125 rem;
+}
+
+
+
+@include media-breakpoint-up(lg) {
+    .swiper-image {
+      width: 18rem;
+    }
+} 
+
+@include media-breakpoint-up(xl) {
+  .swiper-image {
+    width: 25rem;
+  }
+} 
+
+@include media-breakpoint-up(xxl) {
+  .swiper-image {
+    width: 23rem;
+  }
+}  
