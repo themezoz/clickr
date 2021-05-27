@@ -1,16 +1,16 @@
 mixin ServicesCard(config)
-	.card.mb-3.hover-top-shadow.rounded-3(class=`${config.bg}`)
+	.card.mb-3.hover-top-shadow.rounded-3.py-3(class=`${config.bg}`)
 		.row.g-0.flex-center
-			.col-md-4(class=`${config.imageOrder}`)
-				img(src=`${CWD}assets/img/gallery/${config.image}`  alt='...')
-			.col-md-8
-				.card-body.p-8
+			.col-md-5.col-lg-4.text-center(class=`${config.imageOrder}`)
+				img.text-center(src=`${CWD}assets/img/gallery/${config.image}`  alt='...')
+			.col-md-7.col-lg-8
+				.card-body.ps-5.p-lg-8
 					h5.card-title(class=`${config.titleColor}`)!=config.title
 					p.card-text!=config.text
-					.d-flex.justify-content-start
-						a.btn.btn-lg.px-0.stretched-link(href='#!' class=`${config.btnTextColor}`) View portfolio
+					.d-flex.flex-row
+						a.btn.px-0.me-3(href='#!' class=`${config.btnTextColor}`) View portfolio
 							i.fas.fa-arrow-right.ms-2
 						
-						a.btn.btn-lg(href='#!' class=`${config.btnTextColor}`) Pricing
+						a.btn(href='#!' class=`${config.btnTextColor}`) Pricing
 							i.fas.fa-arrow-right.hvr-icon-forward.ms-2
 							

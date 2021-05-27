@@ -150,7 +150,7 @@ mixin PhotoItems(config)
 	.col-sm-6.col-md-4.mb-3.h-100
 		.card.card-span.h-100.text-white
 			img.rounded-3(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
-			a.stretched-link(href='#')
+			a.stretched-link(href='#!')
 
 mixin PhotosShot
 	section
@@ -213,7 +213,7 @@ mixin PhotosShot
 							.col-12.d-flex.justify-content-center.mt-5                                            
 								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
 									i.fas.fa-arrow-right.ms-2
-					.tab-pane.fade#nav-phone(role='tabpanel' aria-labelledby='nav-phone-tab') Phone
+					.tab-pane.fade#nav-phone(role='tabpanel' aria-labelledby='nav-phone-tab')
 						.row.gx-3
 							+PhotoItems(category[24])
 							+PhotoItems(category[25])
@@ -224,7 +224,7 @@ mixin PhotosShot
 							.col-12.d-flex.justify-content-center.mt-5                                            
 								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
 									i.fas.fa-arrow-right.ms-2
-					.tab-pane.fade#nav-camera(role='tabpanel' aria-labelledby='nav-camera-tab') Camera
+					.tab-pane.fade#nav-camera(role='tabpanel' aria-labelledby='nav-camera-tab') 
 						.row.gx-3
 							+PhotoItems(category[30])
 							+PhotoItems(category[31])

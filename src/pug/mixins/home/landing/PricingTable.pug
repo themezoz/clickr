@@ -1,5 +1,5 @@
 mixin PriceItem(config, ...items)
-  .col-md-4.pt-6.px-md-2.px-lg-3
+  .col-md-4.pt-6.px-sm-7.px-md-2.px-lg-3
     .card.h-100.rounded-3(class=`${config.bg}`)
       +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: 'rounded-3' })
       .card-body.z-index-2
@@ -21,7 +21,7 @@ mixin PriceItem(config, ...items)
             button.btn.btn-lg.btn-warning.hover-top.btn-glow.rounded-pill.border-0(type='button') Choose plan
 
 mixin Pricing
-  +Section('container-lg').bg-100.py-7
+  +Section('container-lg').bg-100.py-7#packages
     .row.justify-content-center
       .col-12 
         h1.text-center.lh-sm.fs-lg-7 Our Packages
