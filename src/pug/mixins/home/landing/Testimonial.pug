@@ -41,17 +41,17 @@ mixin Testimonials
       .row.flex-center.h-100
         .col-12
           #carouselTestimonials.carousel.slide(data-bs-ride='carousel')
-            .carousel-inner.ps-sm-4.ps-md-4.pe-xl-9.pb-5.pb-md-2.pb-lg-0
+            .carousel-inner.ps-sm-4.ps-md-4.pb-5.pb-md-2.pb-lg-0
               .carousel-item.active(data-bs-interval='10000')
-                .row.h-100.align-items-center.justify-content-lg-between                
+                .row.h-100.align-items-center.justify-content-around                
                   +Testimonial(testimonials[0])                                                                    
               .carousel-item(data-bs-interval='5000')
-                .row.h-100.align-items-center.justify-content-lg-between                
+                .row.h-100.align-items-center.justify-content-around                
                   +Testimonial(testimonials[1])                    
               .carousel-item(data-bs-interval='3000')
-                .row.h-100.align-items-center.justify-content-lg-between                                  
+                .row.h-100.align-items-center.justify-content-around                                  
                   +Testimonial(testimonials[2])                                                        
-            .row.flex-center.ps-5.ps-lg-0
+            .row.flex-center.ps-5.ps-md-6.ps-lg-7
               .col-12.position-relative
                 a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselTestimonials' style="left:-1.9rem;" role='button' data-bs-slide='prev' )
                   span.carousel-control-prev-icon(aria-hidden='true')
